@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AD Menuiserie · Portes, fenêtres et joints à Angers</title>
+<meta name="description" content="AD Menuiserie, menuisier à Angers : pose de fenêtres et de portes en bois et PVC, remplacement de joints.">
+<meta name="theme-color" content="#1F3B2D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%278%27%20fill%3D%27%231F3B2D%27/%3E%3Crect%20x%3D%2712%27%20y%3D%2710%27%20width%3D%2740%27%20height%3D%2744%27%20rx%3D%272%27%20fill%3D%27none%27%20stroke%3D%27%23C08A57%27%20stroke-width%3D%275%27/%3E%3Cpath%20d%3D%27M32%2010v44M12%2032h40%27%20stroke%3D%27%23C08A57%27%20stroke-width%3D%274%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..700,0..100,0..1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+img{height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+.icone{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- Bandeau démo MJ ---------- */
+.bandeau-demo{background:#0F5C6E;color:#fff;font:500 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;
+  display:flex;gap:10px 16px;align-items:center;justify-content:center;flex-wrap:wrap;padding:9px 16px;text-align:center}
+.bandeau-demo strong{font-weight:700}
+.bandeau-demo a{color:#FFD3A8;font-weight:700;text-decoration:none;white-space:nowrap}
+.bouton-pourquoi{background:#F28C28;color:#1b1b1b;border:0;border-radius:999px;padding:7px 14px;font:700 13px system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.bouton-pourquoi:focus-visible{outline:3px solid #fff;outline-offset:2px}
+body.mode-presentation .bouton-pourquoi{background:#fff}
+@media (max-width:600px){.bandeau-demo{font-size:12.5px;padding:8px 12px}.bandeau-demo .cache-mobile{display:none}}
+
+/* ---------- Bulles d'arguments (mode présentation) ---------- */
+.argument{display:none;position:relative;z-index:5;max-width:560px;margin:18px 0 0;padding:14px 16px 14px 46px;
+  background:#FFF7EE;color:#2a2a2a;border:2px solid #F28C28;border-radius:14px;text-align:left;
+  font:400 15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.argument::before{content:"MJ";position:absolute;left:10px;top:12px;width:26px;height:26px;border-radius:50%;
+  background:#0F5C6E;color:#fff;font:800 10px/26px system-ui,sans-serif;text-align:center}
+.argument b{color:#0F5C6E}
+body.mode-presentation .argument{display:block;animation:apparait .35s ease}
+@keyframes apparait{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ---------- Infos à compléter ---------- */
+.a-completer{font-style:italic;opacity:.7}
+.etiquette-completer{display:inline-block;font:600 10.5px/1 system-ui,sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;border:1px solid currentColor;opacity:.6;padding:3px 6px;border-radius:4px;vertical-align:middle}
+
+/* ---------- Dessins en trait fin ---------- */
+.section-dessinee{position:relative;isolation:isolate}
+.dessin{position:absolute;z-index:-1;fill:none;stroke-width:1.4;opacity:.4;pointer-events:none}
+.dessin *{vector-effect:non-scaling-stroke}
+@media (max-width:600px){.cache-mobile{display:none}}
+
+/* ---------- En-tête collant + navigation ---------- */
+.entete{position:sticky;top:0;z-index:40;backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.nav-principale{display:flex;gap:28px;font:500 15px var(--police-texte)}
+.nav-principale a{text-decoration:none;opacity:.78;transition:opacity .2s}
+.nav-principale a:hover{opacity:1}
+.entete-droite{display:flex;align-items:center;gap:18px}
+.tel-entete{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;text-decoration:none;font:600 15px var(--police-texte)}
+.tel-entete small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.65;font-weight:500}
+@media (max-width:1060px){.nav-principale{display:none}}
+@media (max-width:760px){.tel-entete{display:none}}
+
+/* ---------- Apparition au défilement ---------- */
+.js .revele{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .revele.vu{opacity:1;transform:none}
+
+/* ---------- Barre de confiance ---------- */
+.confiance{position:relative;z-index:3;margin-top:-38px}
+.confiance-grille{display:grid;grid-template-columns:repeat(4,1fr);background:var(--theme-carte);color:var(--theme-texte);
+  border-radius:var(--theme-rayon);box-shadow:0 24px 50px -28px rgba(0,0,0,.45);border:1px solid var(--theme-trait);overflow:hidden}
+.confiance-item{display:flex;gap:14px;align-items:flex-start;padding:22px 22px}
+.confiance-item+.confiance-item{border-left:1px solid var(--theme-trait)}
+.confiance-item .icone{width:30px;height:30px;color:var(--theme-accent-icone,var(--theme-accent))}
+.confiance-item strong{display:block;font:700 16px/1.25 var(--police-titre)}
+.confiance-item span{display:block;font:400 14px/1.4 var(--police-texte);color:var(--theme-doux);margin-top:3px}
+@media (max-width:960px){.confiance-grille{grid-template-columns:1fr 1fr}.confiance-item:nth-child(3){border-left:0}
+  .confiance-item:nth-child(n+3){border-top:1px solid var(--theme-trait)}}
+@media (max-width:600px){.confiance{margin-top:-24px}.confiance-item{padding:16px 14px;gap:10px}.confiance-item .icone{width:24px;height:24px}
+  .confiance-item strong{font-size:14.5px}.confiance-item span{font-size:13px}}
+
+/* ---------- FAQ ---------- */
+.faq{padding:88px 0;background:var(--theme-fond);color:var(--theme-texte)}
+.faq .conteneur{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.faq h2{font-family:var(--police-titre)}
+.faq-liste details{border-bottom:1px solid var(--theme-trait)}
+.faq-liste details:first-child{border-top:1px solid var(--theme-trait)}
+.faq-liste summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;align-items:center;
+  padding:20px 2px;font:600 18px/1.35 var(--police-titre)}
+.faq-liste summary::-webkit-details-marker{display:none}
+.faq-liste summary::after{content:"";width:12px;height:12px;flex:none;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translateY(-3px);transition:transform .25s;opacity:.6}
+.faq-liste details[open] summary::after{transform:rotate(-135deg)}
+.faq-liste details p{margin:0 0 22px;color:var(--theme-doux);font:400 16.5px/1.65 var(--police-texte);max-width:60ch}
+@media (max-width:960px){.faq .conteneur{grid-template-columns:1fr;gap:20px}}
+
+/* ---------- Devis / contact ---------- */
+.devis{padding:92px 0;background:var(--theme-sombre);color:var(--theme-sur-sombre)}
+.devis .conteneur{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.devis h2{font-family:var(--police-titre);color:var(--theme-sur-sombre)}
+.devis .intro{opacity:.82;max-width:34em;margin:16px 0 28px;font-size:18px}
+.coordonnees{display:grid;gap:4px;margin:0 0 26px;padding:0;list-style:none}
+.coordonnees li{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);font:500 16px var(--police-texte)}
+.coordonnees .icone{color:var(--theme-accent-icone-sombre,var(--theme-accent))}
+.coordonnees .a-completer{display:inline-block;margin-top:6px}
+.coordonnees small{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.formulaire{background:var(--theme-carte);color:var(--theme-texte);border-radius:var(--theme-rayon);padding:32px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.formulaire h3{font:700 22px/1.2 var(--police-titre);margin:0 0 4px}
+.formulaire .sous-titre{margin:0 0 22px;color:var(--theme-doux);font-size:15px}
+.formulaire-grille{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.formulaire label{display:grid;gap:6px;font:600 14px var(--police-texte)}
+.formulaire .pleine{grid-column:1/-1}
+.formulaire input,.formulaire select,.formulaire textarea{width:100%;padding:13px 14px;border:1.5px solid var(--theme-trait);border-radius:calc(var(--theme-rayon)*.5);
+  background:var(--theme-champ,#fff);color:var(--theme-texte);font:400 16px var(--police-texte)}
+.formulaire textarea{min-height:110px;resize:vertical}
+.formulaire input:focus,.formulaire select:focus,.formulaire textarea:focus{outline:none;border-color:var(--theme-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--theme-accent) 22%,transparent)}
+.bouton-envoyer{margin-top:18px;width:100%;justify-content:center;border:0;cursor:pointer;padding:16px 22px;border-radius:calc(var(--theme-rayon)*.5);
+  background:var(--theme-accent);color:var(--theme-sur-accent);font:700 17px var(--police-texte);display:flex;gap:10px;align-items:center}
+.bouton-envoyer:hover{filter:brightness(1.06)}
+.mention-form{font-size:12.5px;color:var(--theme-doux);margin:12px 0 0}
+.confirmation{display:none;text-align:center;padding:30px 10px}
+.confirmation .coche{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:var(--theme-accent);color:var(--theme-sur-accent);font-size:30px}
+.formulaire.envoye form{display:none}.formulaire.envoye .confirmation{display:block}
+@media (max-width:960px){.devis .conteneur{grid-template-columns:1fr;gap:34px}}
+@media (max-width:600px){.formulaire{padding:22px}.formulaire-grille{grid-template-columns:1fr}}
+
+/* ---------- Pied de page complet ---------- */
+.pied{background:var(--theme-sombre);color:var(--theme-sur-sombre);border-top:1px solid rgba(255,255,255,.1);padding:56px 0 0;font:400 15px/1.6 var(--police-texte)}
+.pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.pied h4{font:600 12px/1 var(--police-texte);letter-spacing:.16em;text-transform:uppercase;opacity:.55;margin:0 0 16px}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none;opacity:.85}.pied a:hover{opacity:1}
+.pied .nom-pied{font:700 22px/1.1 var(--police-titre);margin:0 0 10px}
+.pied p{margin:0;opacity:.7;max-width:30em}
+.pied-bas{margin-top:44px;padding:18px 0 26px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;font-size:13px;opacity:.65}
+.pied-bas a{font-weight:600}
+@media (max-width:760px){.pied-grille{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- Encart offre MJ (démo) ---------- */
+.offre-mj{background:#0B3F4C;color:#fff;padding:72px 0;font:400 17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;position:relative;overflow:hidden}
+.offre-mj::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,140,40,.28),transparent 65%)}
+.offre-mj .conteneur-mj{width:min(1100px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.offre-mj .etiquette{display:inline-block;background:#F28C28;color:#1b1b1b;font:800 12px/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.offre-mj h2{text-transform:none;font-stretch:normal;color:#fff;font:800 clamp(28px,3.8vw,42px)/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;margin:16px 0 14px;letter-spacing:-.01em}
+.offre-mj p{margin:0 0 12px;color:#cfe3e8}
+.offre-mj .inclus{list-style:none;margin:0;padding:24px;display:grid;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px}
+.offre-mj .inclus li{display:flex;gap:12px;align-items:flex-start}
+.offre-mj .inclus li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:#F28C28;color:#1b1b1b;font:800 13px/24px system-ui;text-align:center}
+.offre-mj .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.offre-mj .actions a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font:700 16px system-ui,sans-serif;padding:14px 20px;border-radius:999px}
+.offre-mj .actions .principal{background:#F28C28;color:#1b1b1b}
+.offre-mj .actions .secondaire{border:2px solid rgba(255,255,255,.35);color:#fff}
+.offre-mj .signature{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;color:#cfe3e8}
+.offre-mj .signature span:first-child{width:40px;height:40px;border-radius:50%;background:#0F5C6E;border:2px solid #F28C28;display:grid;place-items:center;font:800 13px system-ui;color:#fff}
+.offre-mj .conteneur-mj>*{min-width:0}
+@media (max-width:860px){.offre-mj .conteneur-mj{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- Barre d'appel mobile ---------- */
+.barre-mobile{display:none}
+@media (max-width:600px){
+  body{padding-bottom:72px}
+  .barre-mobile{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:var(--theme-carte);border-top:1px solid var(--theme-trait);box-shadow:0 -10px 30px -12px rgba(0,0,0,.35)}
+  .barre-mobile a{display:flex;gap:8px;justify-content:center;align-items:center;text-decoration:none;font:700 15px var(--police-texte);padding:13px;border-radius:calc(var(--theme-rayon)*.5)}
+  .barre-mobile .appel{background:var(--theme-accent);color:var(--theme-sur-accent)}
+  .barre-mobile .devis-lien{background:var(--theme-sombre);color:var(--theme-sur-sombre)}
+  .barre-mobile .icone{width:18px;height:18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .revele{opacity:1;transform:none}}
+
+
+:root{--theme-fond:#fff;--theme-carte:#fff;--theme-texte:#22201C;--theme-doux:#5f594f;--theme-accent:#C08A57;--theme-sur-accent:#1b140c;
+  --theme-sombre:#1F3B2D;--theme-sur-sombre:#F3EDE2;--theme-trait:#E9E0D0;--theme-rayon:6px;--theme-accent-icone:#94643A}
+.devis .surtitre{color:#C08A57}
+:root{
+  --creme:#F3EDE2; --creme-2:#E9E0D0; --foret:#1F3B2D; --foret-2:#2C4E3D; --chene:#C08A57; --chene-fonce:#94643A;
+  --ardoise:#3E4A55; --ciel:#CFE0E6; --encre:#22201C;
+  --police-titre:"Fraunces",Georgia,serif; --police-texte:"Karla",system-ui,sans-serif;
+}
+body{background:var(--creme);color:var(--encre);font:400 18px/1.6 var(--police-texte)}
+.conteneur{width:min(1100px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--police-titre);margin:0;line-height:1.08;font-weight:600}
+h2{font-size:clamp(32px,4.4vw,50px)}
+.surtitre{font:700 13px/1 var(--police-texte);letter-spacing:.16em;text-transform:uppercase;color:var(--chene-fonce);margin:0 0 12px}
+
+.entete{background:rgba(243,237,226,.92);border-bottom:1px solid var(--creme-2)}
+.entete .conteneur{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 0}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque svg{width:40px;height:40px}
+.marque strong{display:block;font:600 22px/1 var(--police-titre)}
+.marque small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--chene-fonce);margin-top:3px}
+.bouton{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:700 16px/1 var(--police-texte);padding:15px 22px;border-radius:2px;
+  background:var(--foret);color:var(--creme);border:2px solid var(--foret);cursor:pointer}
+.bouton.bois{background:var(--chene);border-color:var(--chene);color:#1b140c}
+.bouton.contour{background:transparent;color:var(--foret)}
+.bouton:hover{background:var(--chene-fonce);border-color:var(--chene-fonce);color:#fff}
+
+/* Accueil : la fenêtre qui s'ouvre */
+.accueil{padding:40px 0 110px}
+.accueil .conteneur{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.accueil h1{font-size:clamp(42px,6vw,74px);font-variation-settings:"SOFT" 50,"WONK" 1}
+.accueil h1 i{color:var(--chene-fonce)}
+.accueil p{font-size:20px;max-width:28em;margin:20px 0 28px;color:#45413a}
+.boutons{display:flex;gap:12px;flex-wrap:wrap}
+.fenetre{position:relative;aspect-ratio:4/5;width:100%;max-width:440px;margin:0 auto;background:var(--chene);padding:22px;border-radius:4px;
+  box-shadow:0 30px 60px -30px rgba(31,59,45,.6),inset 0 0 0 6px var(--chene-fonce);cursor:pointer;perspective:1400px}
+.fenetre .dehors{position:absolute;inset:22px;overflow:hidden;background:var(--ciel)}
+.fenetre .dehors svg{width:100%;height:100%;display:block}
+.battants{position:absolute;inset:22px;display:grid;grid-template-columns:1fr 1fr}
+.battant{position:relative;border:14px solid #F7F2E8;background:rgba(207,224,230,.35);backdrop-filter:blur(1px);
+  transition:transform 1s cubic-bezier(.3,.7,.2,1);box-shadow:inset 0 0 0 2px #d9cfbd}
+.battant::after{content:"";position:absolute;left:0;right:0;top:50%;height:10px;background:#F7F2E8;transform:translateY(-50%)}
+.battant.gauche{transform-origin:left center}
+.battant.droit{transform-origin:right center}
+.battant .poignee-f{position:absolute;top:50%;width:8px;height:34px;border-radius:4px;background:#b8ad99;transform:translateY(-50%)}
+.battant.gauche .poignee-f{right:-11px}
+.fenetre.ouverte .battant.gauche{transform:rotateY(-62deg)}
+.fenetre.ouverte .battant.droit{transform:rotateY(62deg)}
+.appui{position:absolute;left:-14px;right:-14px;bottom:-14px;height:18px;background:var(--chene-fonce);border-radius:2px}
+.indication{text-align:center;margin-top:24px;font:italic 500 17px var(--police-titre);color:var(--chene-fonce)}
+
+/* Prestations */
+.prestations{background:var(--foret);color:var(--creme);padding:76px 0}
+.prestations .surtitre{color:var(--chene)}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
+.trois article{border-top:2px solid var(--chene);padding-top:20px}
+.trois svg{width:46px;height:46px;stroke:var(--chene);fill:none;stroke-width:1.6}
+.trois h3{font-size:28px;margin:14px 0 10px}
+.trois p{margin:0;color:#d9dfd5}
+
+/* Diagnostic de fenêtre */
+.diagnostic{padding:80px 0}
+.diagnostic .conteneur{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.questions{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.questions li{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fff;border:1px solid var(--creme-2);padding:14px 16px;border-radius:4px}
+.oui-non{display:flex;gap:6px;flex:none}
+.oui-non button{all:unset;cursor:pointer;padding:8px 14px;border-radius:2px;border:1.5px solid var(--creme-2);font-weight:700;font-size:15px}
+.oui-non button[aria-pressed=true]{background:var(--foret);border-color:var(--foret);color:var(--creme)}
+.oui-non button:focus-visible{outline:2px solid var(--chene)}
+.verdict{background:#fff;border-left:8px solid var(--chene);padding:30px;border-radius:4px;position:sticky;top:70px;box-shadow:0 20px 40px -30px rgba(0,0,0,.4)}
+.verdict .titre-verdict{font:600 32px/1.1 var(--police-titre);margin:8px 0 12px;color:var(--foret)}
+.verdict p{margin:0 0 12px}
+.jauge{display:flex;gap:6px;margin:6px 0 14px}
+.jauge span{flex:1;height:8px;border-radius:4px;background:var(--creme-2)}
+.jauge span.plein{background:var(--chene)}
+
+/* Bois ou PVC */
+.materiaux{padding:0 0 80px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:30px;border:1px solid var(--creme-2);background:#fff}
+.duo div{padding:28px}
+.duo div+div{border-left:1px solid var(--creme-2)}
+.duo h3{font-size:30px;margin-bottom:12px}
+.duo ul{margin:0;padding-left:20px}
+.duo li{margin:6px 0}
+
+/* Contact */
+.contact{background:var(--chene);padding:76px 0;color:#1b140c}
+.contact .conteneur{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.contact .surtitre{color:#1b140c}
+.fiche{background:var(--creme);border-radius:4px;padding:28px;display:grid;gap:12px}
+.fiche div{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.fiche b{min-width:100px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--chene-fonce)}
+.pied-mj{background:var(--foret);color:#cfd8cf}
+
+.dessin{stroke:var(--chene-fonce)}
+.prestations .dessin{stroke:var(--chene);opacity:.3}
+
+@media (max-width:960px){
+  .accueil .conteneur,.diagnostic .conteneur,.contact .conteneur{grid-template-columns:1fr}
+  .trois{grid-template-columns:1fr}
+  .verdict{position:static}
+  .fenetre{max-width:340px}
+}
+@media (max-width:600px){
+  .duo{grid-template-columns:1fr}
+  .duo div+div{border-left:0;border-top:1px solid var(--creme-2)}
+  .questions li{flex-direction:column;align-items:flex-start}
+  .marque small{display:none}
+}
+</style>
+</head>
+<body>
+<div class="bandeau-demo" role="note">
+  <span>Maquette préparée pour <strong>AD Menuiserie</strong> par MJ Solution Informatique<span class="cache-mobile">. Pas encore en ligne</span>.</span>
+  <a href="tel:+33761818353">Ce site vous plaît ? 07 61 81 83 53</a>
+  <button class="bouton-pourquoi" type="button" aria-pressed="false">Pourquoi ce site ?</button>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="dessin-rabot" viewBox="0 0 120 50"><path d="M6 40h100l8-10H20z"/><path d="M30 30c0-14 10-22 24-22 10 0 16 6 16 14v8"/><path d="M80 30V14h12l-4 16"/></symbol>
+  <symbol id="dessin-equerre" viewBox="0 0 80 80"><path d="M4 4v72h72v-14H18V4z"/><path d="M18 20h-6M18 32h-6M18 44h-6M30 62v6M42 62v6M54 62v6"/></symbol>
+  <symbol id="dessin-copeau" viewBox="0 0 80 40"><path d="M4 30c10-26 40-30 50-10 6 12-6 20-14 14-6-4-2-12 4-12"/></symbol>
+</svg>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#haut" aria-label="AD Menuiserie, accueil">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#1F3B2D"/><rect x="12" y="10" width="40" height="44" rx="2" fill="none" stroke="#C08A57" stroke-width="5"/><path d="M32 10v44M12 32h40" stroke="#C08A57" stroke-width="4"/></svg>
+      <span><strong>AD Menuiserie</strong><small>Portes · Fenêtres · Joints</small></span>
+    </a>
+    <nav class="nav-principale" aria-label="Menu"><a href="#prestations">Prestations</a><a href="#diagnostic">Diagnostic</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+    <div class="entete-droite"><a class="tel-entete" href="#contact"><small>Appel direct</small><span>Votre numéro ici</span></a>
+    <a class="bouton" href="#contact"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg> Appeler</a></div>
+  </div>
+</header>
+
+<main id="haut">
+<section class="accueil section-dessinee">
+  <svg class="dessin cache-mobile" style="width:120px;top:10px;left:43%"><use href="#dessin-copeau"/></svg>
+  <div class="conteneur">
+    <div>
+      <p class="surtitre">Menuisier à Angers</p>
+      <h1>Des fenêtres qui ferment <i>vraiment.</i></h1>
+      <p>Pose de fenêtres et de portes, remplacement des joints. En bois ou en PVC, pour arrêter les courants d'air et les factures de chauffage qui grimpent.</p>
+      <div class="boutons">
+        <a class="bouton" href="#formulaire-devis">Demander un devis</a>
+        <a class="bouton contour" href="#diagnostic">Ma fenêtre, je la change&nbsp;?</a>
+      </div>
+      <div class="argument"><b>Cliquez sur la fenêtre.</b> Elle s'ouvre sur des toits d'ardoise, ceux d'ici. Quand quelqu'un tape « AD Menuiserie Angers » aujourd'hui, il tombe sur AD Agencement et sur vos concurrents. Avec ce site, c'est vous qu'il trouve.</div>
+    </div>
+    <div>
+      <div class="fenetre" id="fenetre" role="button" tabindex="0" aria-label="Ouvrir la fenêtre">
+        <div class="dehors"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect width="200" height="240" fill="#CFE0E6"/>
+<circle cx="150" cy="50" r="18" fill="#F6E7B8"/>
+<path d="M0 150 Q50 120 100 140 T200 130 V240 H0z" fill="#9DB89A"/>
+<g fill="#3E4A55"><path d="M10 170 l25-22 25 22z"/><path d="M58 166 l30-26 30 26z"/><path d="M120 172 l22-20 22 20z"/><path d="M160 168 l20-18 20 18z"/></g>
+<g fill="#EFE7D8"><rect x="14" y="170" width="42" height="40"/><rect x="62" y="166" width="52" height="46"/><rect x="124" y="172" width="36" height="38"/><rect x="163" y="168" width="34" height="42"/></g>
+<g fill="#7E95A3"><rect x="22" y="180" width="8" height="10"/><rect x="40" y="180" width="8" height="10"/><rect x="72" y="176" width="9" height="12"/><rect x="95" y="176" width="9" height="12"/><rect x="134" y="182" width="7" height="9"/><rect x="172" y="178" width="7" height="10"/></g>
+<path d="M0 214 H200 V240 H0z" fill="#6E8C6A"/>
+<path d="M0 222 C40 216 80 230 120 222 S180 216 200 222" stroke="#B9D3DC" stroke-width="5" fill="none"/>
+</svg></div>
+        <div class="battants"><div class="battant gauche"><span class="poignee-f"></span></div><div class="battant droit"></div></div>
+        <div class="appui"></div>
+      </div>
+      <p class="indication" id="indication">Cliquez pour ouvrir</p>
+    </div>
+  </div>
+</section>
+<section class="confiance" aria-label="En bref"><div class="conteneur"><div class="confiance-grille revele"><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 2.2 3.2-.4.7 3.2 2.8 1.6-1.4 2.9 1.4 2.9-2.8 1.6-.7 3.2-3.2-.4L12 21l-2.4-2.2-3.2.4-.7-3.2-2.8-1.6L4.3 11.5 2.9 8.6l2.8-1.6.7-3.2 3.2.4z"/><path d="m8.5 11.5 2.3 2.3 4.7-4.7"/></svg><div><strong>Artisan immatriculé</strong><span>Inscrit au registre national des entreprises</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg><div><strong>Bois et PVC</strong><span>Fenêtres, portes et joints</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><div><strong>Conseil honnête</strong><span>On répare quand c'est possible</span></div></div><div class="confiance-item"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Angers et alentours</strong><span>Je viens prendre les mesures</span></div></div></div></div></section>
+
+
+<section class="prestations section-dessinee" id="prestations">
+  <svg class="dessin cache-mobile" style="width:150px;top:40px;right:30px"><use href="#dessin-rabot"/></svg>
+  <div class="conteneur">
+    <p class="surtitre">Ce que je pose</p>
+    <h2>Trois métiers, un seul interlocuteur</h2>
+    <div class="trois">
+      <article><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="1"/><path d="M24 6v36M10 24h28"/></svg><h3>Fenêtres</h3><p>Remplacement de fenêtres anciennes ou simple vitrage, en bois ou en PVC, avec une pose soignée et étanche.</p></article>
+      <article><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="4" width="24" height="40" rx="1"/><circle cx="31" cy="25" r="1.6"/><path d="M8 44h32"/></svg><h3>Portes</h3><p>Portes d'entrée et portes intérieures. Réglage d'une porte qui frotte ou qui ferme mal.</p></article>
+      <article><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 24c4-8 8 8 12 0s8 8 12 0 8 8 12 0"/><path d="M8 32c4-8 8 8 12 0s8 8 12 0 8 8 12 0"/></svg><h3>Joints</h3><p>Des joints neufs sur vos fenêtres existantes : souvent la solution la plus économique contre les courants d'air.</p></article>
+    </div>
+    <div class="argument"><b>Les joints, c'est votre produit d'appel.</b> Une petite intervention pas chère, qui fait entrer chez les gens. Et quand la fenêtre est trop abîmée, c'est vous qu'ils rappellent pour la changer.</div>
+  </div>
+</section>
+
+<section class="diagnostic section-dessinee" id="diagnostic">
+  <svg class="dessin cache-mobile" style="width:80px;bottom:40px;left:24px"><use href="#dessin-equerre"/></svg>
+  <div class="conteneur">
+    <div>
+      <p class="surtitre">Petit diagnostic</p>
+      <h2>Ma fenêtre, je la garde ou je la change&nbsp;?</h2>
+      <p style="color:#45413a">Quatre questions, une réponse honnête. Pas besoin de tout changer quand de nouveaux joints suffisent.</p>
+      <ul class="questions">
+        <li><span>On sent de l'air quand on passe la main autour</span><span class="oui-non" data-q="air"><button type="button" data-v="1">Oui</button><button type="button" data-v="0">Non</button></span></li>
+        <li><span>Il y a de la buée <b>entre</b> les deux vitres</span><span class="oui-non" data-q="buee"><button type="button" data-v="1">Oui</button><button type="button" data-v="0">Non</button></span></li>
+        <li><span>Le cadre est abîmé, pourri ou déformé</span><span class="oui-non" data-q="cadre"><button type="button" data-v="1">Oui</button><button type="button" data-v="0">Non</button></span></li>
+        <li><span>Elle est dure à fermer ou frotte</span><span class="oui-non" data-q="ferme"><button type="button" data-v="1">Oui</button><button type="button" data-v="0">Non</button></span></li>
+      </ul>
+    </div>
+    <div class="verdict" aria-live="polite">
+      <span class="surtitre">Mon avis</span>
+      <div class="jauge" id="jauge"><span></span><span></span><span></span><span></span></div>
+      <div class="titre-verdict" id="titre-verdict">Répondez aux questions</div>
+      <p id="texte-verdict">Le verdict s'affiche au fur et à mesure.</p>
+      <a class="bouton bois" href="#contact">Me faire passer</a>
+    </div>
+    <div class="argument" style="grid-column:1/-1"><b>L'honnêteté, ça vend.</b> Un menuisier qui dit « des joints suffiront » inspire confiance. Le client vous garde en tête pour le jour où il faudra vraiment changer ses fenêtres, et il vous recommande.</div>
+  </div>
+</section>
+
+<section class="materiaux">
+  <div class="conteneur">
+    <p class="surtitre">Matériaux</p>
+    <h2>Bois ou PVC&nbsp;?</h2>
+    <div class="duo">
+      <div><h3>Bois</h3><ul><li>Chaleureux, il garde le cachet des maisons anciennes</li><li>Se répare et se repeint</li><li>Demande un entretien régulier</li></ul></div>
+      <div><h3>PVC</h3><ul><li>Bon isolant, prix plus doux</li><li>Presque pas d'entretien</li><li>Large choix de couleurs et de finitions</li></ul></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="faq" id="faq"><div class="conteneur">
+  <div class="revele"><p class="surtitre">Questions fréquentes</p><h2>Bon à savoir avant de changer vos fenêtres</h2><div class="argument"><b>Montrer que vous connaissez les démarches</b>, c'est rassurer le client sur toute la durée du projet, pas seulement le jour de la pose.</div></div>
+  <div class="faq-liste revele"><details><summary>Changer les joints suffit-il vraiment ?</summary><p>Quand le cadre et le vitrage sont en bon état, oui : des joints neufs suppriment la plupart des courants d'air, pour un budget bien plus faible qu'une fenêtre neuve.</p></details><details><summary>Combien de temps pour remplacer une fenêtre ?</summary><p>La pose elle-même prend en général quelques heures par fenêtre. La fabrication sur mesure demande, elle, plusieurs semaines : le délai est indiqué sur le devis.</p></details><details><summary>Faut-il une autorisation de la mairie ?</summary><p>Dès que l'aspect extérieur change (matériau, couleur, découpe des carreaux), une déclaration préalable est en général demandée, et les règles sont plus strictes près des monuments historiques. Je vous aide à vérifier avant de commander.</p></details></div>
+</div></section><section class="devis" id="contact"><div class="conteneur">
+  <div class="revele">
+    <p class="surtitre">Contact</p>
+    <h2>Parlons de vos ouvertures</h2>
+    <p class="intro">Fenêtres qui laissent passer l'air, porte à changer ? Décrivez-moi votre besoin, je passe prendre les mesures.</p>
+    <ul class="coordonnees"><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><div><small>Téléphone</small><span class="a-completer">Votre numéro ici</span></div></li><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-7 8-7s7 2.5 8 7"/></svg><div><small>Artisan</small>Albin Duffour</div></li><li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><small>Secteur</small>Angers et alentours</div></li></ul>
+    <div class="argument"><b>L'hiver, c'est votre saison.</b> Les gens cherchent « courant d'air fenêtre » le soir, au chaud chez eux. Avec ce formulaire, ils vous laissent leur demande à ce moment-là.</div>
+  </div>
+  <div class="formulaire revele" id="formulaire-devis">
+    <form>
+      <h3>Demande de devis</h3>
+      <p class="sous-titre">Sans engagement. Je vous recontacte pour en parler.</p>
+      <div class="formulaire-grille">
+        <label>Nom<input name="nom" autocomplete="name" placeholder="Votre nom" required></label>
+        <label>Téléphone<input name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
+        <label>Ville<input name="ville" value="Angers" autocomplete="address-level2"></label>
+        <label>Type de travaux<select name="travaux"><option>Remplacement de fenêtres</option><option>Porte d&#x27;entrée</option><option>Porte intérieure</option><option>Joints, courants d&#x27;air</option><option>Autre</option></select></label>
+        <label class="pleine">Votre projet<textarea name="message" placeholder="Surface, pièce concernée, délai souhaité…"></textarea></label>
+      </div>
+      <button class="bouton-envoyer" type="submit">Envoyer ma demande →</button>
+      <p class="mention-form">Vos coordonnées servent uniquement à vous recontacter au sujet de votre demande.</p>
+    </form>
+    <div class="confirmation" role="status"><div class="coche">✓</div><h3>Merci, c'est envoyé !</h3>
+      <p>Ici, c'est une démonstration : une fois le site en ligne, cette demande arrivera directement dans la boîte mail de AD Menuiserie.</p></div>
+  </div>
+</div></section>
+<section class="offre-mj" aria-label="Proposition MJ Solution Informatique"><div class="conteneur-mj">
+  <div>
+    <span class="etiquette">Maquette réalisée pour vous</span>
+    <h2>Ce site peut être le vôtre, en ligne d'ici quelques jours.</h2>
+    <p>Bonjour, nous sommes Théo et Kelly, de MJ Solution Informatique à Angers. Nous avons préparé cette maquette pour AD Menuiserie, sans engagement de votre part.</p>
+    <p>On l'ajuste ensemble avec vos photos de chantier, votre numéro et vos prestations exactes, puis nous la mettons en ligne.</p>
+    <div class="actions">
+      <a class="principal" href="tel:+33761818353">📞 Nous appeler · 07 61 81 83 53</a>
+      <a class="secondaire" href="mailto:contact@mjinformatique.fr?subject=Site%20internet%20pour%20AD%20Menuiserie">✉️ Écrire un e-mail</a>
+    </div>
+    <div class="signature"><span>MJ</span><span>Théo et Kelly · MJ Solution Informatique, Angers<br>contact@mjinformatique.fr</span></div>
+  </div>
+  <ul class="inclus">
+    <li><span>Votre propre adresse, par exemple <b>ad-menuiserie-angers.fr</b>, enregistrée à votre nom</span></li>
+    <li><span>Un site lisible sur téléphone, tablette et ordinateur</span></li>
+    <li><span>Pensé pour être trouvé sur Google quand on cherche votre métier à Angers</span></li>
+    <li><span>Votre numéro cliquable et un formulaire de devis qui arrive dans vos mails</span></li>
+    <li><span>Vous restez propriétaire du site</span></li>
+    <li><span>Des modifications ponctuelles quand vous en avez besoin</span></li>
+  </ul>
+</div></section>
+<footer class="pied"><div class="conteneur">
+  <div class="pied-grille">
+    <div><p class="nom-pied">AD Menuiserie</p><p>Pose de fenêtres et de portes en bois et PVC, remplacement de joints, à Angers.</p></div>
+    <div><h4>Navigation</h4><ul><li><a href="#prestations">Prestations</a></li><li><a href="#diagnostic">Garder ou changer ma fenêtre</a></li><li><a href="#faq">Questions fréquentes</a></li><li><a href="#contact">Demander un devis</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>Albin Duffour, menuisier</li><li>Angers (49)</li><li><span class="a-completer">Votre numéro ici</span></li></ul></div>
+  </div>
+  <div class="pied-bas"><span>© <span class="annee"></span> AD Menuiserie · SIRET 102 831 955 00012</span><span><a href="#haut">Mentions légales</a> · Site réalisé par <a href="mailto:contact@mjinformatique.fr">MJ Solution Informatique</a>, Angers</span></div>
+</div></footer>
+<div class="barre-mobile"><a class="appel" href="#contact"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Appeler</a><a class="devis-lien" href="#formulaire-devis"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 12h6M10 16h6"/></svg>Devis</a></div>
+<script>
+// Bouton « Pourquoi ce site ? » : affiche ou masque les arguments
+(function(){
+  const bouton=document.querySelector('.bouton-pourquoi');
+  if(bouton)bouton.addEventListener('click',()=>{
+    const actif=document.body.classList.toggle('mode-presentation');
+    bouton.textContent=actif?'Masquer les explications':'Pourquoi ce site ?';
+    bouton.setAttribute('aria-pressed',actif);
+    if(actif){const premier=document.querySelector('.argument');if(premier)premier.scrollIntoView({behavior:'smooth',block:'center'});}
+  });
+  document.querySelectorAll('.annee').forEach(e=>e.textContent=new Date().getFullYear());
+
+  // Apparition douce des blocs au défilement
+  const aReveler=document.querySelectorAll('.revele');
+  if('IntersectionObserver' in window){
+    const observateur=new IntersectionObserver(entrees=>entrees.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');observateur.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+    aReveler.forEach(el=>observateur.observe(el));
+  } else aReveler.forEach(el=>el.classList.add('vu'));
+
+  // Formulaire de devis (démo : rien n'est envoyé)
+  const formulaire=document.querySelector('.formulaire form');
+  if(formulaire)formulaire.addEventListener('submit',e=>{
+    e.preventDefault();
+    const prenom=(formulaire.querySelector('[name=nom]').value||'').trim().split(' ')[0];
+    document.querySelector('.confirmation h3').textContent=prenom?'Merci '+prenom+', c\'est envoyé !':'Merci, c\'est envoyé !';
+    formulaire.closest('.formulaire').classList.add('envoye');
+  });
+})();
+
+
+// Fenêtre qui s'ouvre
+const fenetre=document.getElementById('fenetre');
+function basculerFenetre(){
+  const ouverte=fenetre.classList.toggle('ouverte');
+  document.getElementById('indication').textContent=ouverte?'Et ça se referme sans courant d\'air.':'Cliquez pour ouvrir';
+  fenetre.setAttribute('aria-label',ouverte?'Fermer la fenêtre':'Ouvrir la fenêtre');
+}
+fenetre.addEventListener('click',basculerFenetre);
+fenetre.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();basculerFenetre();}});
+
+// Diagnostic : garder ou changer
+const reponses={};
+document.querySelectorAll('.oui-non').forEach(groupe=>{
+  groupe.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    groupe.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    reponses[groupe.dataset.q]=b.dataset.v==='1';
+    majVerdict();
+  }));
+});
+function majVerdict(){
+  const r=reponses, repondu=Object.keys(r).length;
+  const score=(r.air?1:0)+(r.buee?1:0)*2+(r.cadre?1:0)*2+(r.ferme?1:0);
+  document.querySelectorAll('#jauge span').forEach((s,i)=>s.classList.toggle('plein',i<Math.min(4,Math.ceil(score*4/6))));
+  let titre,texte;
+  if(r.cadre||r.buee){titre='Un remplacement à envisager';
+    texte=r.buee?"La buée entre les vitres veut dire que le double vitrage n'est plus étanche : il n'isole presque plus. Selon l'état du cadre, on change le vitrage ou la fenêtre entière.":"Un cadre abîmé ne retiendra plus des joints neufs bien longtemps. Je viens voir s'il se répare ou s'il vaut mieux remplacer.";}
+  else if(r.air&&r.ferme){titre='Réglage et joints neufs';texte="La fenêtre a sûrement un peu bougé. Un réglage des ferrures et des joints neufs devraient régler le problème, sans tout changer.";}
+  else if(r.air){titre='Des joints neufs suffiront sûrement';texte="Le cadre et le vitrage ont l'air en bon état : remplacer les joints coupe les courants d'air pour un petit budget.";}
+  else if(r.ferme){titre='Un simple réglage';texte="Une fenêtre qui frotte se règle souvent en quelques minutes. Rien à changer.";}
+  else if(repondu===4){titre='Votre fenêtre va bien';texte="Gardez-la ! Revenez me voir si les courants d'air apparaissent cet hiver.";}
+  else {titre='Encore '+(4-repondu)+' question'+(4-repondu>1?'s':'');texte="Le verdict s'affine à chaque réponse.";}
+  document.getElementById('titre-verdict').textContent=titre;
+  document.getElementById('texte-verdict').textContent=texte;
+}
+</script>
+</body>
+</html>
